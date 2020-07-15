@@ -9,19 +9,35 @@ const NavLinkContainer = styled("a")(
     textDecoration: "none",
     textTransform: "uppercase",
     textAlign: "center",
-    fontWeight: 800,
+    fontWeight: "navLink",
     py: 1,
     transition: "all 100ms ease-out",
     color: "nav.link",
     letterSpacing: "0.06rem",
+  }),
+  props => ({
+    color: `${
+      props.active
+        ? props.theme.colors.nav.linkActive
+        : props.theme.colors.nav.link
+    }`,
     "&:hover": {
-      color: "nav.linkHover",
+      color: `${
+        props.active
+          ? props.theme.colors.nav.linkActive
+          : props.theme.colors.nav.linkHover
+      }`,
+      cursor: "pointer",
     },
   })
 )
 
-const NavLink = ({ href, children }) => {
-  return <NavLinkContainer href={href}>{children}</NavLinkContainer>
+const NavLink = ({ children, section_id, onClick, active }) => {
+  return (
+    <NavLinkContainer section_id={section_id} onClick={onClick} active={active}>
+      {children}
+    </NavLinkContainer>
+  )
 }
 
 export default NavLink

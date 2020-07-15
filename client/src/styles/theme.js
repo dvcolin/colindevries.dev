@@ -17,6 +17,9 @@ export default {
   ],
   fontWeights: {
     body: 400,
+    heading: 700,
+    bold: 700,
+    navLink: 800,
   },
   lineHeights: {
     body: 1.5,
@@ -24,6 +27,8 @@ export default {
   colors: {
     text: {
       gray: "#868e96",
+      dark: "#343a40",
+      accent: "#1C7C54",
     },
     background: {
       light: "#fff",

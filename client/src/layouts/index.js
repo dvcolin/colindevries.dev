@@ -23,12 +23,15 @@ const Main = styled("main")(
   })
 )
 
-const Layout = ({ children }) => {
+const Layout = ({ children, visibleSection, setVisibleSection }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <LayoutContainer>
-        <Navbar />
+        <Navbar
+          visibleSection={visibleSection}
+          setVisibleSection={setVisibleSection}
+        />
         <Main>{children}</Main>
       </LayoutContainer>
     </ThemeProvider>

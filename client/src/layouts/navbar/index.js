@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import css from "@styled-system/css"
 import { Flex } from "../../components/flex"
@@ -43,22 +43,66 @@ const NavLinks = styled("nav")(
     display: ["none", null, null, "flex"],
     flexDirection: "column",
     mt: [0, null, null, 2],
-    pb: 2,
+  }),
+  props => ({
+    display: `${props.visible ? "flex" : null}`,
   })
 )
 
-const Navbar = () => {
+const Navbar = ({ visibleSection, setVisibleSection }) => {
+  const [navVisible, setNavVisible] = useState(false)
+
+  const scrollToSection = id => {
+    const section = document.getElementById(id)
+    section.scrollIntoView(true)
+    setNavVisible(!navVisible)
+  }
   return (
     <NavbarContainer>
       <Image src={image} />
-      <NavLinks>
-        <NavLink href="#">About</NavLink>
-        <NavLink href="#">Experience</NavLink>
-        <NavLink href="#">Education</NavLink>
-        <NavLink href="#">Skills</NavLink>
-        <NavLink href="#">Interests</NavLink>
-        <NavLink href="#">Projects</NavLink>
-        <NavLink href="#">Blog</NavLink>
+      <NavLinks visible={navVisible}>
+        <NavLink
+          section_id="about"
+          onClick={() => scrollToSection("about")}
+          active={visibleSection === "about"}
+        >
+          About
+        </NavLink>
+        <NavLink
+          section_id="experience"
+          onClick={() => scrollToSection("experience")}
+          active={visibleSection === "experience"}
+        >
+          Experience
+        </NavLink>
+        <NavLink
+          section_id="education"
+          onClick={() => scrollToSection("education")}
+          active={visibleSection === "education"}
+        >
+          Education
+        </NavLink>
+        <NavLink
+          section_id="skills"
+          onClick={() => scrollToSection("skills")}
+          active={visibleSection === "skills"}
+        >
+          Skills
+        </NavLink>
+        <NavLink
+          section_id="projects"
+          onClick={() => scrollToSection("projects")}
+          active={visibleSection === "projects"}
+        >
+          Projects
+        </NavLink>
+        <NavLink
+          section_id="blog"
+          onClick={() => scrollToSection("blog")}
+          active={visibleSection === "blog"}
+        >
+          Blog
+        </NavLink>
       </NavLinks>
     </NavbarContainer>
   )
