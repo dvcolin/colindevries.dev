@@ -14,6 +14,7 @@ const NavLinkContainer = styled("a")(
     transition: "all 100ms ease-out",
     color: "nav.link",
     letterSpacing: "0.06rem",
+    bg: "nav.background",
   }),
   props => ({
     color: `${

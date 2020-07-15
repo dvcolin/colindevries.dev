@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import css from "@styled-system/css"
 import { Flex } from "../../components/flex"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
 import image from "../../images/colin-devries.jpeg"
 import NavLink from "./NavLink"
 
@@ -17,6 +19,29 @@ const NavbarContainer = styled(Flex)(
     width: ["100%", null, null, 272],
     px: 2,
     bg: "nav.background",
+  })
+)
+
+const Name = styled("div")(
+  css({
+    display: ["block", null, null, "none"],
+    fontSize: 3,
+    fontWeight: "bold",
+    color: "nav.linkActive",
+  })
+)
+
+const NavToggleButton = styled("button")(
+  css({
+    display: ["block", null, null, "none"],
+    ml: "auto",
+    background: "none",
+    border: "none",
+    color: "nav.linkActive",
+    fontSize: 3,
+    "&:focus": {
+      outline: "none",
+    },
   })
 )
 
@@ -54,11 +79,17 @@ const Navbar = ({ visibleSection, setVisibleSection }) => {
 
   const scrollToSection = id => {
     const section = document.getElementById(id)
-    section.scrollIntoView(true)
-    setNavVisible(!navVisible)
+    if (section) {
+      section.scrollIntoView(true)
+      setNavVisible(!navVisible)
+    }
   }
   return (
     <NavbarContainer>
+      <Name>Colin de Vries</Name>
+      <NavToggleButton onClick={() => setNavVisible(!navVisible)}>
+        <FontAwesomeIcon icon={faBars} />
+      </NavToggleButton>
       <Image src={image} />
       <NavLinks visible={navVisible}>
         <NavLink
