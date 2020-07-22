@@ -16,6 +16,23 @@ export const H1 = styled("h1")(
   })
 )
 
+export const H2 = styled("h2")(
+  css({
+    ...heading,
+    fontSize: 6,
+    lineHeight: 1.2,
+    mb: 3,
+  })
+)
+
+export const H3 = styled("h3")(
+  css({
+    ...heading,
+    fontSize: 5,
+    lineHeight: 1.2,
+  })
+)
+
 export const H4 = styled("h4")(
   css({
     ...heading,

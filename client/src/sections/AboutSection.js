@@ -35,7 +35,11 @@ const Description = styled(P)(
 
 const AboutSection = ({ setVisibleSection }) => {
   return (
-    <SectionContainer id="about" setVisibleSection={setVisibleSection}>
+    <SectionContainer
+      id="about"
+      setVisibleSection={setVisibleSection}
+      bottomDivider
+    >
       <H1>
         Colin <Break /> <AccentColor>de Vries</AccentColor>
       </H1>

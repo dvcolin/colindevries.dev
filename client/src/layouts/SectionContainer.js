@@ -3,6 +3,7 @@ import styled from "styled-components"
 import css from "@styled-system/css"
 import { FlexColumn } from "../components/flex"
 import VisibilitySensor from "react-visibility-sensor"
+import SectionDivider from "./SectionDivider"
 
 const SectionContainer = styled(FlexColumn)(
   css({
@@ -15,7 +16,7 @@ const SectionContainer = styled(FlexColumn)(
   })
 )
 
-export default ({ children, setVisibleSection, id }) => {
+export default ({ children, setVisibleSection, id, bottomDivider }) => {
   const sectionChange = isVisible => {
     if (isVisible) {
       setVisibleSection(id)
@@ -28,7 +29,10 @@ export default ({ children, setVisibleSection, id }) => {
       partialVisibility={true}
       offset={{ top: 200, bottom: 560 }}
     >
-      <SectionContainer id={id}>{children}</SectionContainer>
+      <>
+        <SectionContainer id={id}>{children}</SectionContainer>
+        {bottomDivider ? <SectionDivider /> : null}
+      </>
     </VisibilitySensor>
   )
 }
