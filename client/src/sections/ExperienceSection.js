@@ -2,6 +2,7 @@ import React from "react"
 import SectionContainer from "../layouts/SectionContainer"
 import { H2 } from "../components/headings"
 import { P } from "../components/text"
+import PortfolioItem from "../components/PortfolioItem"
 
 const ExperienceSection = ({ setVisibleSection }) => {
   return (
@@ -11,14 +12,12 @@ const ExperienceSection = ({ setVisibleSection }) => {
       bottomDivider
     >
       <H2>Experience</H2>
-      <P>
-        Although I have no formal work experience in web development roles, I am
-        anxious to get hired and start working on real-world applications. My
-        education at Lambda School has provided me with all the skills I need to
-        be a successful developer. I have extensive experience in front-end
-        development with React, API development with NodeJS and Express, as well
-        as database management with SQL and NoSQL databases.
-      </P>
+      <PortfolioItem
+        heading="Team Lead"
+        subheading="Lambda School"
+        description="During my time as a team lead, I worked with Lambda School students currently going through the Labs section of the track. During labs, students have an 8-week time frame to either develop an application from scratch or expand upon an existing project. My role was to hold stand up meetings, track the development process, and help students experiencing difficulties."
+        date="March 2020 - June 2020"
+      />
     </SectionContainer>
   )
 }
