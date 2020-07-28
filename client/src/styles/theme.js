@@ -32,6 +32,8 @@ export default {
     },
     background: {
       light: "#fff",
+      gray: "#868e96",
+      accent: "#1C7C54",
     },
     nav: {
       background: "#1C7C54",

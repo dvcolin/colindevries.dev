@@ -41,7 +41,7 @@ const ProjectUrlButtonContainer = styled("a")(
     justifyContent: "center",
     alignItems: "center",
     fontSize: 0,
-    bg: "text.gray",
+    bg: "background.gray",
     color: "background.light",
     borderRadius: 5,
     mr: 2,
@@ -52,7 +52,7 @@ const ProjectUrlButtonContainer = styled("a")(
       ml: 1,
     },
     "&:hover": {
-      bg: "text.accent",
+      bg: "background.accent",
     },
   })
 )

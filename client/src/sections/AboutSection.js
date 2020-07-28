@@ -1,7 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import css from "@styled-system/css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faLinkedinIn,
+  faGithub,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import SectionContainer from "../layouts/SectionContainer"
+import { Flex } from "../components/flex"
 import { H1, H4 } from "../components/headings"
 import { P } from "../components/text"
 
@@ -33,6 +41,30 @@ const Description = styled(P)(
   })
 )
 
+const SocialLinkContainer = styled("a")(
+  css({
+    height: "5.6rem",
+    width: "5.6rem",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: 4,
+    bg: "background.gray",
+    color: "background.light",
+    borderRadius: "50%",
+    mr: 2,
+    "&:hover": {
+      bg: "background.accent",
+    },
+  })
+)
+
+const SocialLink = ({ href, icon }) => (
+  <SocialLinkContainer href={href} target="_blank">
+    <FontAwesomeIcon icon={icon} />
+  </SocialLinkContainer>
+)
+
 const AboutSection = ({ setVisibleSection }) => {
   return (
     <SectionContainer
@@ -55,6 +87,15 @@ const AboutSection = ({ setVisibleSection }) => {
         opportunity of working on a team to develop real-world applications.
         Currently looking for opportunities in front-end development roles.
       </Description>
+      <Flex>
+        <SocialLink
+          href="https://www.linkedin.com/in/dvcolin/"
+          icon={faLinkedinIn}
+        />
+        <SocialLink href="https://github.com/dvcolin" icon={faGithub} />
+        <SocialLink href="https://twitter.com/dv_divs" icon={faTwitter} />
+        <SocialLink href="mailto:colin@colindevries.dev" icon={faEnvelope} />
+      </Flex>
     </SectionContainer>
   )
 }
