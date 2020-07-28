@@ -13,7 +13,7 @@ const EducationSection = ({ setVisibleSection }) => {
       <H2>Education</H2>
       <PortfolioItem
         heading="Lambda School"
-        subheading="Full Stack Web Development"
+        subheading="Software Development Bootcamp"
         description="Full Stack Web Development Track"
         date="May 2019 - March 2020"
       />

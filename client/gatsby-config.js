@@ -31,7 +31,10 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Roboto:400,500,700,800", "Barlow+Condensed:500,600,700"],
+          families: [
+            "Roboto:400,500,700,800",
+            "Barlow+Condensed:400,500,600,700",
+          ],
         },
       },
     },
