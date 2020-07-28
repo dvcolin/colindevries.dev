@@ -16,7 +16,7 @@ const ProjectsSection = ({ setVisibleSection }) => {
         subheading="React &middot; NodeJS &middot; GraphQL &middot; Prisma"
         description="Mixdown is a web application designed to connect electronic music artists with electronic music fans. Artists can share their latest tracks, allowing users to download them for free or for a price decided by the artist. This provides a way for up and coming artists to mix, remix, and promote their favorite music to a much wider audience."
         date="June 2020 - Present"
-        repo_url="https://github.com/users/dvcolin/projects/3"
+        repo_url="https://github.com/dvcolin/mixdown-fe"
         website_url="https://soundsave.netlify.com/"
       />
     </SectionContainer>

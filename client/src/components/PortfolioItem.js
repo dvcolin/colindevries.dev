@@ -40,22 +40,27 @@ const ProjectUrlButtonContainer = styled("a")(
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: 48,
-    width: 48,
-    fontSize: 1,
+    fontSize: 0,
     bg: "text.gray",
-    color: "white",
+    color: "background.light",
     borderRadius: 5,
     mr: 2,
+    textDecoration: "none",
+    py: 1,
+    px: 2,
+    div: {
+      ml: 1,
+    },
     "&:hover": {
       bg: "text.accent",
     },
   })
 )
 
-const ProjectUrlButton = ({ href, icon }) => (
+const ProjectUrlButton = ({ href, icon, text }) => (
   <ProjectUrlButtonContainer href={href} target="_blank">
     <FontAwesomeIcon icon={icon} />
+    <div>{text}</div>
   </ProjectUrlButtonContainer>
 )
 
@@ -74,8 +79,12 @@ const PortfolioItem = ({
       <ItemDescription>{description}</ItemDescription>
       {repo_url && website_url ? (
         <Flex>
-          <ProjectUrlButton href={repo_url} icon={faCode} />
-          <ProjectUrlButton href={website_url} icon={faMousePointer} />
+          <ProjectUrlButton href={repo_url} icon={faCode} text="View Code" />
+          <ProjectUrlButton
+            href={website_url}
+            icon={faMousePointer}
+            text="View Website"
+          />
         </Flex>
       ) : null}
     </div>
