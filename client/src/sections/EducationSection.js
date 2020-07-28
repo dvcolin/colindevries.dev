@@ -5,16 +5,12 @@ import PortfolioItem from "../components/PortfolioItem"
 
 const EducationSection = ({ setVisibleSection }) => {
   return (
-    <SectionContainer
-      id="education"
-      setVisibleSection={setVisibleSection}
-      bottomDivider
-    >
+    <SectionContainer id="education" setVisibleSection={setVisibleSection}>
       <H2>Education</H2>
       <PortfolioItem
         heading="Lambda School"
         subheading="Software Development Bootcamp"
-        description="Full Stack Web Development Track"
+        description="Full Stack Software Development Track"
         date="May 2019 - March 2020"
       />
       <PortfolioItem

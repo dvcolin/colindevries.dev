@@ -67,11 +67,7 @@ const SocialLink = ({ href, icon }) => (
 
 const AboutSection = ({ setVisibleSection }) => {
   return (
-    <SectionContainer
-      id="about"
-      setVisibleSection={setVisibleSection}
-      bottomDivider
-    >
+    <SectionContainer id="about" setVisibleSection={setVisibleSection}>
       <H1>
         Colin <Break /> <AccentColor>de Vries</AccentColor>
       </H1>
@@ -93,7 +89,7 @@ const AboutSection = ({ setVisibleSection }) => {
           icon={faLinkedinIn}
         />
         <SocialLink href="https://github.com/dvcolin" icon={faGithub} />
-        <SocialLink href="https://twitter.com/dv_divs" icon={faTwitter} />
+        <SocialLink href="https://twitter.com/dvcolin_" icon={faTwitter} />
         <SocialLink href="mailto:colin@colindevries.dev" icon={faEnvelope} />
       </Flex>
     </SectionContainer>

@@ -5,11 +5,7 @@ import PortfolioItem from "../components/PortfolioItem"
 
 const ExperienceSection = ({ setVisibleSection }) => {
   return (
-    <SectionContainer
-      id="experience"
-      setVisibleSection={setVisibleSection}
-      bottomDivider
-    >
+    <SectionContainer id="experience" setVisibleSection={setVisibleSection}>
       <H2>Experience</H2>
       <PortfolioItem
         heading="Team Lead"

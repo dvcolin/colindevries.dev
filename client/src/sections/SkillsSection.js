@@ -72,11 +72,7 @@ const WorkflowItem = ({ text }) => (
 
 const SkillsSection = ({ setVisibleSection }) => {
   return (
-    <SectionContainer
-      id="skills"
-      setVisibleSection={setVisibleSection}
-      bottomDivider
-    >
+    <SectionContainer id="skills" setVisibleSection={setVisibleSection}>
       <H2>Skills</H2>
       <div>
         <H4>Programming Languages &amp; Tools</H4>

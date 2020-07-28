@@ -5,11 +5,7 @@ import PortfolioItem from "../components/PortfolioItem"
 
 const ProjectsSection = ({ setVisibleSection }) => {
   return (
-    <SectionContainer
-      id="projects"
-      setVisibleSection={setVisibleSection}
-      bottomDivider
-    >
+    <SectionContainer id="projects" setVisibleSection={setVisibleSection}>
       <H2>Projects</H2>
       <PortfolioItem
         heading="Mixdown"

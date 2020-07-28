@@ -16,7 +16,7 @@ const SectionContainer = styled(FlexColumn)(
   })
 )
 
-export default ({ children, setVisibleSection, id, bottomDivider }) => {
+export default ({ children, setVisibleSection, id, noDivider }) => {
   const sectionChange = isVisible => {
     if (isVisible) {
       setVisibleSection(id)
@@ -31,7 +31,7 @@ export default ({ children, setVisibleSection, id, bottomDivider }) => {
     >
       <>
         <SectionContainer id={id}>{children}</SectionContainer>
-        {bottomDivider ? <SectionDivider /> : null}
+        {noDivider ? null : <SectionDivider />}
       </>
     </VisibilitySensor>
   )
