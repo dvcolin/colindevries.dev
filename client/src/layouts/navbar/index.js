@@ -49,8 +49,8 @@ const Image = styled("img")(
   css({
     display: ["none", null, null, "block"],
     borderRadius: "50%",
-    height: "16rem",
-    width: "16rem",
+    height: 160,
+    width: 160,
     borderWidth: 8,
     borderStyle: "solid",
     borderColor: "rgba(255,255,255,0.2)",

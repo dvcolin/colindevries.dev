@@ -43,8 +43,8 @@ const Description = styled(P)(
 
 const SocialLinkContainer = styled("a")(
   css({
-    height: "5.6rem",
-    width: "5.6rem",
+    height: 56,
+    width: 56,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
