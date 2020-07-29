@@ -121,18 +121,18 @@ const Navbar = ({ visibleSection, setVisibleSection }) => {
           Skills
         </NavLink>
         <NavLink
+          section_id="interests"
+          onClick={() => scrollToSection("interests")}
+          active={visibleSection === "interests"}
+        >
+          Interests
+        </NavLink>
+        <NavLink
           section_id="projects"
           onClick={() => scrollToSection("projects")}
           active={visibleSection === "projects"}
         >
           Projects
-        </NavLink>
-        <NavLink
-          section_id="blog"
-          onClick={() => scrollToSection("blog")}
-          active={visibleSection === "blog"}
-        >
-          Blog
         </NavLink>
       </NavLinks>
     </NavbarContainer>

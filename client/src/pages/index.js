@@ -4,8 +4,8 @@ import AboutSection from "../sections/AboutSection"
 import ExperienceSection from "../sections/ExperienceSection"
 import EducationSection from "../sections/EducationSection"
 import SkillsSection from "../sections/SkillsSection"
+import InterestsSection from "../sections/InterestsSection"
 import ProjectsSection from "../sections/ProjectsSection"
-import BlogSection from "../sections/BlogSection"
 
 const IndexPage = () => {
   const [visibleSection, setVisibleSection] = useState("about")
@@ -16,8 +16,8 @@ const IndexPage = () => {
       <ExperienceSection setVisibleSection={setVisibleSection} />
       <EducationSection setVisibleSection={setVisibleSection} />
       <SkillsSection setVisibleSection={setVisibleSection} />
+      <InterestsSection setVisibleSection={setVisibleSection} />
       <ProjectsSection setVisibleSection={setVisibleSection} />
-      <BlogSection setVisibleSection={setVisibleSection} />
     </Layout>
   )
 }

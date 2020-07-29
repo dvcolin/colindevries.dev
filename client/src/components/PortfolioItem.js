@@ -69,7 +69,8 @@ const PortfolioItem = ({
   subheading,
   description,
   date,
-  repo_url,
+  fe_repo_url,
+  be_repo_url,
   website_url,
 }) => (
   <PortfolioItemContainer>
@@ -77,9 +78,10 @@ const PortfolioItem = ({
       <H3>{heading}</H3>
       <StyledH4>{subheading}</StyledH4>
       <ItemDescription>{description}</ItemDescription>
-      {repo_url && website_url ? (
+      {fe_repo_url && be_repo_url && website_url ? (
         <Flex>
-          <ProjectUrlButton href={repo_url} icon={faCode} text="View Code" />
+          <ProjectUrlButton href={fe_repo_url} icon={faCode} text="Front End" />
+          <ProjectUrlButton href={be_repo_url} icon={faCode} text="Back End" />
           <ProjectUrlButton
             href={website_url}
             icon={faMousePointer}
